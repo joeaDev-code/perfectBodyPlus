@@ -1,12 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Anek+Gurmukhi:wght@100..800&family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-$couleurPrimaire: purple;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$couleurPrimaire: #150f69;
+:root{
+  --primaryColor: #150f69;
+  --secondaryColor: #333;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Anek Gurmukhi", sans-serif;
+    font-family: "Montserrat Alternates", sans-serif;
     font-optical-sizing: auto;
+    color: #313131;
     p{
         font-weight: 300;
     }
@@ -359,6 +365,7 @@ h1{
     position: relative;
     overflow: hidden;
     z-index: 1;
+    position: relative;
     h1 {
         text-align: center;
         margin-bottom: 50px;
@@ -467,12 +474,30 @@ h1{
 }
 
 #Service{
-    padding: 100px 10vw;
-    min-height: 100vh;
+    min-height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: url("./images/service-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed!important;
+    position: relative;
+    width: 100%;
+    .cover{
+      padding: 100px 10vw;
+      background-color: rgba(255, 255, 255, 0.808);
+      backdrop-filter: blur(3px);
+      color: white!important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
     .container{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -483,10 +508,14 @@ h1{
             height: fit-content;
             padding:30px 10px;
             box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.21);
+            background-color: var(--primaryColor);
             .title{
-                color: $couleurPrimaire;
+                color: white;
                 font-size: 20px;
                 margin-bottom: 20px;
+            }
+            p{
+              color: #797979;
             }
         }
 
@@ -494,6 +523,7 @@ h1{
 }
 
 #Tarif {
+  position: relative;
     padding: 100px;
     background-color: #f9f9f9;
     text-align: center;
@@ -591,6 +621,10 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url("./images/blog-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     button{
       padding: 10px 15px;
       border-radius: 30px;
@@ -679,6 +713,10 @@ h1{
     padding: 50px;
     width: 100%;
     align-items: center;
+    background-color: var(--secondaryColor);
+    h1{
+      color: white;
+    }
     .container{
       display: flex;
       flex-direction: row;
@@ -849,6 +887,7 @@ h1{
     div{
       position: relative;
       padding: 30px;
+      width: fit-content;
     }
     .follow{
       ul{
@@ -1244,7 +1283,7 @@ h1{
     .col{
       width: 100%;
       height: 70%;
-      background-color: rgba(128, 0, 128, 0.692);
+      background-color: var(--primaryColor);
     }
     .btn-container{
       margin-top: 80px;

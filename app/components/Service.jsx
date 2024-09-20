@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 function Service() {
   return (
     <div id='Service'>
+      <div className="cover">
       <motion.h1
         className="title-section"
         initial={{ y: -50, opacity: 0 }}
@@ -43,6 +44,7 @@ function Service() {
           </motion.div>
         ))}
       </motion.div>
+      </div>
     </div>
   )
 }

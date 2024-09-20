@@ -12,7 +12,6 @@ import Testimony from './components/Testimony';
 import ContactUs from './components/ContactUs';
 import Blog from './components/Blog';
 import Loader from './components/Loader';
-import Program from './components/Program'
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('');
@@ -61,20 +60,6 @@ export default function Home() {
       });
     };
   }, [sectionRefs]);
-
-  useEffect(() => {
-    // Simule un délai de chargement (par exemple pour charger des données)
-    const timer = setTimeout(() => {
-      setLoading(false); // Cache le loader après 2 secondes
-    }, 2000);
-
-    // Cleanup pour éviter les fuites de mémoire
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <Loader />; // Affiche le loader si le site est en cours de chargement
-  }
 
   return (
     <div>
