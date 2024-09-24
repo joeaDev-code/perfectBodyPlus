@@ -8,6 +8,8 @@ import CodeQr from './codeQr'
 
 import Image from 'next/image'
 
+import Logo from '../images/logo/logo.png'
+
 import ICON_FB from '../images/icons/facebook.png'
 import ICON_INSTA from '../images/icons/instagram.png'
 import ICON_TWIT from '../images/icons/twitter.png'
@@ -18,8 +20,8 @@ function Footer() {
   return (
     <div id='Footer'>
         <div className="container">
-            <div className="logo">
-                perfetBody+
+            <div id="logo">
+                <Image src={Logo} alt='logo'/>
             </div>
             <div className="lien">
                 <h3> Lien utile</h3>
@@ -33,9 +35,11 @@ function Footer() {
                     <Link to='ContactUs'>
                     <li>Contacts</li></Link>
                     <Link to='Blog'>
-                    <li> Voir nos articles</li></Link>
+                    <li> Voir nos articles</li>
+                    </Link>
+                    <Link to='Program'>
                     <li>Emploi du temps</li>
-                    <li>FAQ</li>
+                    </Link>
 
                 </ul>
             </div>

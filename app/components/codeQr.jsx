@@ -12,7 +12,7 @@ const CodeQr = () => {
             <QRCode
               value="https://192.169.1.8:3000"
               size={100}
-              fgColor="purple" // Couleur du QR Code
+              fgColor="var(--backgroundColor)" // Couleur du QR Code
               level="L" // Niveau de correction d'erreur ('L', 'M', 'Q', 'H')
             />
 

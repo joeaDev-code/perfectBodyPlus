@@ -11,7 +11,7 @@ import Tarif from './components/Tarif';
 import Testimony from './components/Testimony';
 import ContactUs from './components/ContactUs';
 import Blog from './components/Blog';
-import Loader from './components/Loader';
+import Program from './components/Program';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('');
@@ -83,6 +83,7 @@ export default function Home() {
       <div ref={testimonyRef} id="testimony">
         <Testimony />
       </div>
+      <Program />
       <div ref={contactUsRef} id="contactUs">
         <ContactUs />
       </div>

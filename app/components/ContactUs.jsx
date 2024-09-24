@@ -13,7 +13,7 @@ function ContactUs() {
     <div id='ContactUs'>
       <div className="container">
         <div className='col'>
-          <h1>Besoin d&quot;aide <br/> et de renseignements ?</h1>
+          <h1>Besoin d&apos;aide <br/> et de renseignements ?</h1>
           <p> Alors renseignez le formulaire </p>
             
         </div>

@@ -1,12 +1,18 @@
 'use client'
 
 import Image from 'next/image'
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-import IMG1 from '../images/tapisCourse.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 import IMG_BG from '../images/big-dumbbells-white.jpg'
-
-import { motion, AnimatePresence } from 'framer-motion'
 
 import { equipement } from '../data'
 
@@ -19,44 +25,43 @@ function Equipement() {
   return (
     <div id='Equipement'>
         <h1 className="subtitle-section"> <span className='nb'>2</span> Nos equipements ...</h1>   
-            <motion.div 
-                initial={{ opacity:0}}
-                whileInView={{ opacity:1}}
-                transition={{duration:1, delay:0.5, ease: "easeIn"}}
-                className="container">
-                    
-                <AnimatePresence>
-                {equipement.map((dt, index)=>
-                item === dt.id && (                 
-                <motion.div
-                    key={dt.id}
-                    initial={{ x: '100%', opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 1.5, ease: 'easeOut' }}
-                    exit={{ x: '-50%', opacity: 0, transition: { duration: 0.5 } }}
-                    className="boxEquipement">
-                        <div className="img-container" >
-                            <Image src={dt.Image} alt={dt.Title}/>
-                        </div>
-                        <div className="text-container">
-                            <h3>  {dt.Title}</h3>
-                            <p> {dt.Description}</p>
-                        </div>
-                    </motion.div>
-                )
-                )}
-                </AnimatePresence>
-            </motion.div>
+         
+        <Swiper
+      // install Swiper modules
+      className='container'
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      breakpoints={{
+        0:{
+            slidesPerView:1,
+        },
+        500:{
+            slidesPerView: 2,
+        },
+        1024:{
+            slidesPerView: 3,
+        }
+      }}
+      slidesPerView={3}
+      navigation
+      pagination={{ clickable: true }}
+    >
+        {equipement.map(item=>
+        <SwiperSlide className="boxEquipement" key={item.id}>
+            <div className="img-container">
+                <Image src={item.Image} alt={item.Title}/>
+            </div>
+            <h3> {item.Title}</h3>
+        
+       
+        </SwiperSlide>
 
-        <div className="pagination">
-            {equipement.map((dt, index)=> 
-                <span key={index} onClick={()=>setItem(dt.id)} className={item === dt.id && 'active'}>{dt.id}</span>
-            )}
-        </div>
+        )}
+    </Swiper>
 
-        <div className="imgBg">
+    <div className="imgBg">
             <Image src={IMG_BG} alt='image-bg' />
-        </div>
+            </div>
     </div>
   )
 }

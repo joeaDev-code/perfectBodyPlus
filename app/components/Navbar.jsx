@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 
 import Image from 'next/image';
 
-import LOGO from '../images/logo/perfectBody_Logo.png'
+import LOGO from '../images/logo/logo.png'
 
 function Navbar({ activeSection }) {
   const navbarRef = useRef(null);
@@ -28,13 +28,9 @@ function Navbar({ activeSection }) {
         setIsScroll(window.scrollY > 0);
         if (navbarRef.current) {
           if (window.scrollY > 100) {
-            navbarRef.current.style.position = "fixed";
-            navbarRef.current.style.top = "0";
-            navbarRef.current.style.width = "100%";
-            navbarRef.current.style.backgroundColor = 'white';
-          } else {
-            navbarRef.current.style.position = "sticky";
-            navbarRef.current.style.top = "0px";
+            navbarRef.current.style.backgroundColor = 'var(--secondaryColor)';
+          }else{
+            navbarRef.current.style.backgroundColor = 'transparent';
           }
         }
       }
