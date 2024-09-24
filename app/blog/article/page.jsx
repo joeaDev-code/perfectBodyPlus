@@ -17,7 +17,7 @@ function page() {
         <div className="container">
         {blogArticles.map(dt=>
             <Link href={`/blog/article/${dt.id}`} key={dt.id}>
-        <div className="boxBlog" key={dt.id}>
+        <div className="boxBlogA" key={dt.id}>
         <div className="img-container">
             <Image src={dt.image} alt={dt.title}/>
         </div>

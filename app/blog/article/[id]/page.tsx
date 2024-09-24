@@ -9,7 +9,9 @@ import Link from 'next/link'
 
 import Image from 'next/image'
 
-import LOGO from '../../../images/logo/perfectBody_Logo.png'
+import LOGO from '../../../images/logo/logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 function Page({ params }: { params: { id: string }}) {
   const { scrollYProgress } = useScroll()
@@ -71,7 +73,7 @@ function Page({ params }: { params: { id: string }}) {
             <h4>{fetchArticle.author} | {fetchArticle.date} </h4>
           </div>
             {fetchArticle.content.map(dt =>
-              <div className="item" key={dt.subtitle}>
+              <div className="itemArticle" key={dt.subtitle}>
                 <h3>{dt.subtitle}</h3>
                 <p>{dt.text}</p>
               </div>
@@ -79,12 +81,11 @@ function Page({ params }: { params: { id: string }}) {
           </div>
           <div className="navigation">
             <Link href='/blog'>
-              <button>{'<<'} BLOG</button>
+              <button>
+                <FontAwesomeIcon icon={faHome}  style={{color: 'white!imporptant'}} /> Nos articles
+              </button>
             </Link>
             <div></div>
-            <Link href={`/blog/article/${fetchArticle.id + 1}`}>
-              <button>Prochain article {'>>'}</button>
-            </Link>
           </div>
           
           <div className='avis'>

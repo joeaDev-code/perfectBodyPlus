@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 import IMG1 from '../../images/imgBannerBlog.jpg'
 
-import LOGO from '../../images/logo/perfectBody_Logo.png'
+import LOGO from '../../images/logo/logo.png'
 
 import Link from 'next/link'
 
@@ -36,7 +36,7 @@ function Banner() {
               whileInView={{y:0, opacity:1}}
               transition={{delay:0.2, duration:1.5, ease:'easeInOut'}}
             
-            >&ldquot;Inspiration et Connaissance : Des Articles pour Affiner Votre Entraînement&ldquot;</motion.p>
+            >&quot;Inspiration et Connaissance : Des Articles pour Affiner Votre Entraînement&quot;</motion.p>
         </div>
     </div>
   )

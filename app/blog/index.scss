@@ -97,7 +97,6 @@ h1{
 
     .text-container{
         position: absolute;
-        // background-color:rgba(128, 0, 128, 0.342);
         bottom: 0;
         left: 0;
         right: 0;
@@ -113,7 +112,6 @@ h1{
         h1{
             font-size: 75px;
             color: white;
-            // text-shadow: 2px 10px 10px purple;
         }
         p{
           font-size: 30px;
@@ -136,7 +134,7 @@ h1{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
-        .boxBlog{
+        .boxBlogA{
           width: 300px;
           height: 400px;
           display: flex;

@@ -1,7 +1,7 @@
 
   .BannerItemArticle {
     width: 100%;
-    color: purple;
+    color: #150f69;
     padding: 100px 10vw;
     padding-bottom: 20px;
     align-items: center;
@@ -72,13 +72,13 @@
     min-height: 100vh;
     width: 100%;
     //   background-color: #ccc;
-    .item {
+    >.itemArticle {
       margin: 10px 0;
       background-color: white;
       padding: 20px;
       h3 {
         font-size: 25px;
-        color: purple;
+        color: #150f69;
         font-weight: 400;
       }
       p {
@@ -95,7 +95,7 @@
     justify-content: space-between;
     padding: 40px 100px;
     button {
-      background-color: purple;
+      background-color: #150f69;
       padding: 20px;
       outline: none;
       border: none;
@@ -145,7 +145,7 @@
     justify-content: center;
     flex-direction: column;
     h1{
-      color: purple;
+      color: #150f69;
     }
     form{
       width: 100%;
@@ -158,7 +158,7 @@
       margin-top: 20px;
       label{
         font-weight: 500;
-        color: purple;
+        color: #150f69;
         font-size: 18px;
       }
       textarea{
@@ -168,7 +168,7 @@
         padding: 15px;
         &:focus{
           outline: none;
-          border: 2px solid purple;
+          border: 2px solid #150f69;
         }
       }
 

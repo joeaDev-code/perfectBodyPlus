@@ -314,6 +314,19 @@ h1 {
     flex-direction: column;
     transition: transform 0.3s ease;
 
+    .swiper-button-next,
+    .swiper-button-prev{
+      color: var(--primaryColor);
+    }
+
+    .swiper-pagination-bullet{
+      background-color: var(--secondaryColor);
+    }
+
+    .swiper-pagination-bullet-active{
+      background-color: var(--primaryColor);
+    }
+
     .boxEquipement {
       height: 350px;
       .img-container {
@@ -375,7 +388,8 @@ h1 {
   @media (max-width: 500px) {
     .container {
       max-width: 100%;
-      padding: 60px;
+      padding: 30px;
+      padding-bottom: 450px;
     }
 
     .boxEquipement {
