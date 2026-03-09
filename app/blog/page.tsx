@@ -1,18 +1,32 @@
+'use client'
+
 import React from 'react'
-import './index.scss'
-
-import Navbar from '../components/Navbar'
+// Pas besoin d'importer la page de détail ici, 
+// on importe le composant qui liste les articles.
 import Banner from './components/Banner'
-import Article from './article/page'
+import BlogArticles from './components/BlogArticles' 
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
-
-function page() {
+function BlogPage() {
   return (
-    <div>
+    <main className="bg-bg-dark min-h-screen">
+      {/* On peut réutiliser la Navbar globale. 
+         Si elle est en 'fixed', elle couvrira le haut du banner 
+      */}
+      <Navbar activeSection="blog" />
+      
+      {/* Section d'en-tête spécifique au blog */}
       <Banner />
-      <Article />
-    </div>
+      
+      {/* Liste de tous les articles avec la grille optimisée */}
+      <div className="relative z-10 -mt-10"> 
+        <BlogArticles />
+      </div>
+
+      <Footer />
+    </main>
   )
 }
 
-export default page
+export default BlogPage
