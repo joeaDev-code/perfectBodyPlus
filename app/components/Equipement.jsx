@@ -67,7 +67,7 @@ function Equipement() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter flex items-center gap-4 text-white">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter flex items-center gap-4 text-white">
               <span className="text-primary/20 outline-text">02</span>
               Equipement
             </h2>
