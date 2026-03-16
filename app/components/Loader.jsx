@@ -1,9 +1,8 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import LOGO from '../images/logo/perfectBody_Logo.png'
+import Logo from './Logo' // Import du composant Logo textuel
 
 function Loader() {
   return (
@@ -32,24 +31,22 @@ function Loader() {
           ))}
         </div>
 
-        {/* --- LOGO CENTRAL --- */}
+        {/* --- LOGO TEXTUEL CENTRAL --- */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: [0.8, 1, 0.9], opacity: 1 }}
+          animate={{ 
+            scale: [0.9, 1.05, 1], 
+            opacity: 1,
+            filter: ["drop-shadow(0 0 0px rgba(255,77,0,0))", "drop-shadow(0 0 15px rgba(255,77,0,0.5))", "drop-shadow(0 0 5px rgba(255,77,0,0.2))"]
+          }}
           transition={{
             duration: 2,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="relative z-10 w-32 h-32 md:w-40 md-h-40"
+          className="relative z-10"
         >
-          <Image 
-            src={LOGO} 
-            alt='PerfectBody+ Logo' 
-            fill 
-            className="object-contain drop-shadow-[0_0_20px_rgba(255,77,0,0.3)]"
-            priority
-          />
+          <Logo className="text-4xl md:text-5xl" />
         </motion.div>
 
         {/* --- BARRE DE CHARGEMENT SUBTILE --- */}
@@ -68,11 +65,11 @@ function Loader() {
 
         {/* --- TEXTE DE CHARGEMENT --- */}
         <motion.p
-          className="mt-4 text-[10px] font-black uppercase tracking-[0.5em] text-gray-500"
+          className="mt-6 text-[10px] font-black uppercase tracking-[0.5em] text-gray-500"
           animate={{ opacity: [0.3, 1, 0.3] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         >
-          Chargement...
+          Initialisation...
         </motion.p>
       </div>
     </div>
